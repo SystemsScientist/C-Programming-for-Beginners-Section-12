@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1676548510 source:/home/snarkydata/udemy-courses/C-Courses/C-Programming-For-Beginners/Section-12-Pointers/Accessing-Pointers/main.c
+	<stdio.h>
+	<stdlib.h>
+

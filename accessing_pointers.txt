@@ -116,7 +116,7 @@ Displaying the nUmber of Bytes a Pointer is Using
 		  printf("pnumber's size" %d bytes\n", (int)sizeof(pnumber));
 
 
-Example (See Accessing-Pointer directory and main.c file)
+Example (See Accessing-Pointers directory and main.c file)
 
 
 

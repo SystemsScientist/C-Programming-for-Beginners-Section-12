@@ -23,7 +23,22 @@ Please feel free to reach out to me at devildoc300@gmail.com if you have any que
 or comments. In addition, feel free to utilize the source code for your consumption
 and edification.
 
+## Books and Articles
+
+### Articles
+
+FreeCodeCamp: <a href="https://www.freecodecamp.org/news/a-quick-and-thorough-guide-to-null-what-it-is-and-how-you-should-use-it-d170cea62840/" title="A quick and thorough quide to null..." target="A quick guide and thorough guide to..." alt="_blank">A quick and thorough guide to ‘null’: what it is, and how you should use it</a> 
+
+### Books
+
+Book of Proof: <a href="https://www.people.vcu.edu/~rhammack/BookOfProof/" title="Book of Proof" target="_blank" alt="Book of Proof">Book of Proof</a>
+
+
 ~ Matt
+
+
+Technical Notes and Considerations
+---------------------------------------------------------------------------------------
 
 To compile, build, and execute the Section 12 files and directories,
 

@@ -23,6 +23,10 @@ Please feel free to reach out to me at devildoc300@gmail.com if you have any que
 or comments. In addition, feel free to utilize the source code for your consumption
 and edification.
 
+~ Matt
+
+
+
 ## Books and Articles
 
 ### Articles
@@ -33,8 +37,6 @@ FreeCodeCamp: <a href="https://www.freecodecamp.org/news/a-quick-and-thorough-gu
 
 Book of Proof: <a href="https://www.people.vcu.edu/~rhammack/BookOfProof/" title="Book of Proof" target="_blank" alt="Book of Proof">Book of Proof</a>
 
-
-~ Matt
 
 
 Technical Notes and Considerations

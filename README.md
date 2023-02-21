@@ -26,6 +26,7 @@ and edification.
 ~ Matt
 
 
+<strong><i>For further discussion and information on the concept of "NULL", see the articles and books below.</i></strong>
 
 ## Books and Articles
 

@@ -7,6 +7,8 @@ Overview
 	- an array is a collection of objects of the same type
 	  that you can refer to using a single name
 
+	  int array_example[50];
+
 	- a pointer is a variable that has as its value a memory
 	  address that can reference another variable or constant
 	  of a given type

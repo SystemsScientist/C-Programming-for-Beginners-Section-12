@@ -67,7 +67,7 @@ Pointer Arithmetic (continued)
 	  values array
 
 
-Code Example
+Code Example with Array Notation
 
 	int arraySum(int array[], const int n) {
 
@@ -120,7 +120,7 @@ Code Example (continued)
 	  to be of type pointer
 
 
-Example with Pointer Notation
+Code Example with Pointer Notation
 
 	int array_sum(int *array, const in n) {
 

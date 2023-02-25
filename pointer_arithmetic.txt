@@ -1,0 +1,176 @@
+
+Section 12: Pointer Arithmetic
+---------------------------------------------------------------------------------------------------------
+
+Pointer Arithmetic
+
+	- the real power of using pointers to arrays comes into play
+	  when you want to sequence through the elements of an array
+
+	  *values_ptr	// can be used to access the first integer of the values array, 
+			// that is, values[0]
+
+	- to reference values[3] through the values_ptr variable, you can add 3 to
+	  values_ptr and then apply the indirection operator
+
+	  *(values_ptr + 3)
+
+	- the expression, *(values_ptr + i) can be used to access the value contained
+	  in values[i]
+	
+	- to set values[10] to 27, you could do the following
+
+	  values[10] = 27;
+
+	- or, using values_ptr, you could
+
+	  *(values_ptr + 10) = 27;
+
+
+Pointer Arithmetic (continued)
+
+	- to set values_ptr to point to the second element of the values array, you
+	  can apply the address operator to values[1] and assign the result to 
+	  values_ptr
+
+	  values_ptr = &values[1];
+
+	- if values_ptr points to values[0], you can set it to point to values[1]
+	  by simply adding 1 to the value of values_ptr
+
+	  values_ptr += 1;
+
+	- this is a perfectly valid expression in C and can be used for pointers
+	  to any data type
+
+
+Pointer Arithmetic (continued)
+
+	- the increment and decrement operators ++ and -- are particularly useful
+	  when dealing with pointers
+
+	- using the increment operator on a pointer has the same effect as adding
+	  one to the pointer
+
+	- using the decrement operator has the same effect as subtracting one 
+	  from the pointer
+
+	  ++values_ptr;
+
+	- sets values_ptr pointing to the next integer in the values array
+	  (values[1])
+
+	  --values_ptr;
+
+	- sets values_ptr pointing to the previous integer in the values array,
+	  assuming that values_ptr was not pointing to the beginning of the 
+	  values array
+
+
+Code Example
+
+	int arraySum(int array[], const int n) {
+
+		int sum = 0, *ptr;
+		int *const array_end = array + n;
+
+		for(ptr = array; ptr < array_end; ++ptr)
+			sum += *ptr;
+
+		return sum;
+	}
+
+	void main(void) {
+
+		int array_sum(int array[], const int n);
+		int values[10] = {3, 7, -9, 3, 6, -1, 7, 9, 1, -5};
+
+		printf("The sum is %i\n", array_sum(values, 10));
+	}
+
+
+Code Example (continued)
+
+	- to pass an array to a function, you simply specify the name of the array
+
+	- the produce a pointer to an array, you need only specify the name of the
+	  array
+
+	- this implies that in the call to the array_sum() function, what was 
+	  passed to the function was actually a pointer to the array values
+		+ explains why you are able to change the elements of an array
+		  from within a function
+
+	- so, you might wonder why the formal parameter inside the function is
+	  not declared to be a pointer
+
+	  int array_sum(int *array, const int n)
+
+	- the above is perfectly valid
+		+ pointers and arrays are intimately related in C
+		+ this is why you can declare array to be of type "array of ints"
+		  inside the array_sum function or to be of type "pointer to int"
+
+	- if you are going to be using index numbers to reference the elements
+	  of an array that is passed to a function, declare the corresponding
+	  formal parameter to be an array
+		+ more correctly reflects the use of the array by the function
+
+	- if you are using the argument as a pointer to the array, declare it
+	  to be of type pointer
+
+
+Example with Pointer Notation
+
+	int array_sum(int *array, const in n) {
+
+		int sum = 0;
+		int * const array_end = array + n;
+
+		for (; array < array_end; ++array)
+			sum += *array;
+
+		return sum;
+	}
+
+	void main(void) {
+
+		int array_sum(int *array, const int n);
+		int values[10] = {3, 7, -9, 3, 6, -1, 7, 9, 1, -5};
+
+		printf("The sum is %i\n", array_sum(values, 10));
+	}
+
+
+Summary
+
+	int urn[3];
+	int *ptr1, *ptr2;
+
+	Valid				Invalid
+	---------------------		----------------------
+
+	ptr1++;				urn++;
+	ptr2 = ptr1 + 2;		ptr2 = ptr2 + ptr1;
+	ptr2 = urn + 1;			ptr2 = urn * ptr1;
+
+
+Summary (continued)
+
+	- functions that process arrays actually use pointers as arguments
+
+	- you have a choice between array notation and pointer notation
+	  for writing array-processing functions
+
+	- using array notation makes it more obvious that the function is
+	  working with arrays
+		+ array notation has a more familiar look to programmers
+		  versed in FORTRAN, Pascal, Modula-2, or BASIC
+
+	- other programmers might be more accustomed to working with
+	  pointers and might find the pointer notation more natural
+		+ closer to machine language and, with some compilers,
+		  leads to more efficient code
+
+
+

@@ -1,0 +1,26 @@
+
+Pointers and Arrays Example
+------------------------------------------------------------------------------------------
+
+// This program demonstrates the effect of adding an integer value to a pointer.
+
+#include <stdio.h>
+#include <string.h>
+
+int main(void) {
+
+	char multiple[] = "a string";
+	char *p = multiple;
+
+	for (int i = 0; i < strnlen(multiple, sizeof(multiple)); ++i) {
+		printf("multiple[%d] = %c\n", i, multiple[i]);
+		printf("*(p+%d) = %c\n", i, *(p + 1));
+		printf("&multiple[%d] = %p\n", i, &multiple[i]);
+		printf("p+%d = %p\n", i, p + i);
+	}
+
+	return 0;
+}
+
+
+

@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1678756344 source:/home/snarkydata/udemy-courses/C-Courses/C-Programming-For-Beginners/Section-12-Pointers/Pointers-and-Arrays-Example/main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

@@ -36,8 +36,6 @@ void swap(int x, int y) {
 	temp = x; 	// save the value of x
 	x = y;		// put y into x
 	y = temp;	// put temp into y
-
-	return 1;
 }
 
 int main(void) {
@@ -57,6 +55,8 @@ int main(void) {
 
 	return 0;
 }
+
+Passing Data Using Copies of Pointers
 
 
 

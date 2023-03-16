@@ -116,5 +116,87 @@ int main(void) {
 }
 
 
+Summary of Syntax
+
+	- you can communicate two kinds of information about a variable
+	  to a function
+
+		function1(x);
+
+	- you transmit the value of x and the function must be declared
+	  with the same type as x
+
+		int function1(int num);
+
+		function2(&x);
+
+	- you transmit the address of x and require the function 
+	  definition to include a pointer to the correct type
+
+		int function2(int *ptr);
+
+
+const Pointer Parameters
+
+	- you can qualify a function parameter using the const keyword
+
+		+ indicates that the function will treat the argument
+		  that is passed for this parameter as a constant
+
+		+ only useful when the parameter is a pointer
+
+	- you apply the const keyword to a parameter that is a pointer
+	  to specify that a function will not change the value to 
+	  which the argument points
+
+	  bool send_message(const char *pmessage) {
+
+		// code to send the message
+		return true;
+	  }
+
+	- the type of the parameter, pmessage, is a pointer to a
+	  const char
+
+		+ it is the char value that's const, not its address
+
+		+ you could specify the pointer itself as const too,
+		  but this makes little sense because the address is
+		  passed by value
+
+			- you cannot change the original pointer in 
+			  the calling function
+
+	- the compiler knows that an argument that is a pointer to
+	  constant data will be safe
+
+	- if you pass a pointer to constant data s the argument for a
+	  parameter then the parameter must be used as above
+
+
+Returning Pointers from a Function
+
+	- returning a pointer from a function is a particularly 
+	  powerful capability
+
+		+ it provides a way for you to return not just a
+		  single value, but a whole set of values
+
+	- you would have to declare a function returning a pointer
+
+	  int *name_of_function() {
+
+		.
+		.
+		.
+	  }
+
+	- be careful though, there are specific hazards related
+	  to returning a pointer
+
+		+ use local variables to avoid interfering with
+		  the variable that the argument points to
+
+
 
 

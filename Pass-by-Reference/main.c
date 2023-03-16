@@ -1,7 +1,7 @@
 /*
     Author: Matt Johnson
     Subject: pointers
-    Purpose:
+    Purpose: program demonstrates pass by value
     Date: 03/16/2023
 */
 
@@ -16,14 +16,14 @@ int main(void) {
     int a = 100;
     int b = 200;
 
-    printf("Before swap, value of a: %d\n", a);
-    printf("Before swap, value of b: %d\n\n", b);
+    printf("Before swap, value of a: %d\n", a);     // value equals 100
+    printf("Before swap, value of b: %d\n\n", b);   // value equals 200
 
     // call function to swap the values
     swap(a, b);
 
-    printf("After swap, value of a: %d\n", a);
-    printf("After swap, value of b: %d\n", b);
+    printf("After swap, value of a: %d\n", a);      // value equals 100
+    printf("After swap, value of b: %d\n", b);      // value equals 200
 
     return 0;
 }

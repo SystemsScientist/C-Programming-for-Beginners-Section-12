@@ -19,7 +19,7 @@ int main(void) {
 
     pnumber = &number;      // store the address of number in pnumber
 
-    printf("pnumber's address: %p\n", (void*)&pnumber);      //output the address
+    printf("pnumber's address: %p\n", (void*)&pnumber);      // output the address
     printf("pnumber's size: %zd bytes\n", sizeof(pnumber));  // output the size
     printf("pnumber's value: %p\n", pnumber);                // output the value (an address)
     printf("value pointed to: %d\n", *pnumber);              // value at the address

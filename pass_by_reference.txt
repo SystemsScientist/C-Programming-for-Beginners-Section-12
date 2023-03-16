@@ -58,6 +58,63 @@ int main(void) {
 
 Passing Data Using Copies of Pointers
 
+	- pointers and functions get along quite well together
+
+		+ you can pass a pointer as an argument to a function
+		  and you can also have a function return a pointer
+		  as its result
+
+	- pass by reference copies the address of an argument into the
+	  formal parameter
+
+		+ the address is used to access the actual argument
+		  used in the call
+
+		+ means the changes made to the parameter affect the
+		  passed argument
+
+	- to pass a value by reference, argument pointers are passed
+	  to the functions just like any other value
+
+		+ you need to declare the function parameters as
+		  pointer types
+
+		+ changes inside the function are reflected outside the
+		  function as well
+
+		+ unlike call by value where the changes do not reflect
+		  outside the function
+
+
+Example Using Pointers to Pass Data
+
+/* function definition to swap the values */
+void swap(int *x, int *y) {
+
+	int temp;
+	
+	temp = *x;	// save value at address x
+	*x = *y;	// put y into x
+	*y = temp;	// put temp into y
+}
+
+int main(void) {
+
+	// local variables
+	int a = 100;
+	int b = 200;
+
+	printf("Before swap, value of a: %d\n", a);
+	printf("Before swap, value of b: %d\n", b);
+
+	swap(&a, &b);
+
+	printf("After swap, value of a: %d\n", a);
+	printf("After swap, value of b: %d\n", b);
+
+	return 0;
+}
+
 
 
 

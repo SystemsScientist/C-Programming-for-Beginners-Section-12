@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1678966720 source:/home/snarkydata/udemy-courses/C-Courses/C-Programming-For-Beginners/Section-12-Pointers/Counting-Characters-in-a-String/main.c
+	<stdio.h>
+	<stdlib.h>
+

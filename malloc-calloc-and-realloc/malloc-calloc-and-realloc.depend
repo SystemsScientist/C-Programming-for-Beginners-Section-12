@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1679917932 source:/home/snarkydata/udemy-courses/C-Courses/C-Programming-For-Beginners/Section-12-Pointers/malloc-calloc-and-realloc/main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
